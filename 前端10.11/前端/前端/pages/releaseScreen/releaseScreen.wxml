@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="wrapper">
+        <view class="welcome">
+        欢迎回来！
+        </view>
+        <view class="input-content">
+        <view class="input-item">
+            <input  type="text" placeholder="请输入学校" data-type="schoolName" id="schoolName" bindinput="handleInput"/>
+        </view>
+        <view class="input-item">
+            <input type="text"  placeholder="请输入专业" data-type="majorName" id="majorName" bindinput="handleInput"/>
+        </view>
+        </view>
+        <button class="confirm-btn" bindtap="Screen">查询</button>
+    </view>
+ 
+</view>

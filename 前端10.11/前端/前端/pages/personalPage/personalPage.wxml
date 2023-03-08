@@ -1,0 +1,67 @@
+<view class="personalContainer">
+  <view class="top-bg"></view>
+  <view class="userinfo" >
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="toLogin"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src='{{userInfo.headImage ? userInfo.headImage : "/static/images/personal/missing-face.png"}}' mode="cover"  bindtap="special"></image>
+      <text class="nickname" bindtap="toLogin">{{userInfo.nick ? userInfo.nick : '请登录'}}</text>
+      <text class="deadline" hidden="{{userInfo.identity != 1}}" bindtap="toLogin">未认证</text>
+      <text class="deadline" hidden="{{userInfo.identity != 2}}" bindtap="toLogin">导师</text>
+      <text class="deadline" hidden="{{userInfo.identity != 3}}" bindtap="toLogin">准研究生</text>
+      <text class="deadline" hidden="{{userInfo.identity != 4}}" bindtap="toLogin">在读/毕业研究生</text>
+      <text class="deadline"  bindtap="special" > 
+        <text>{{userInfo.sign}}</text>
+      </text>
+    </block>
+  </view>
+
+
+  <view class="cover-container"
+        bindtouchstart="handleTouchStart"
+        bindtouchmove="handleTouchMove"
+        bindtouchend="handleTouchEnd"
+        style="transform:{{coverTransform}}; transition:{{coverTransition}}">
+    
+    <!-- 个人中心导航 -->
+    <view class="nav-section">
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50" bindtap="myCollect">
+        <text class="iconfont icon-wodeye_wodeshoucang"></text>
+        <text>我的收藏</text>
+      </view>
+      <view class="nav-item"   hover-class="common-hover" hover-stay-time="50" bindtap="myFriend">
+        <text class="iconfont icon-gerenziliao1"></text>
+        <text>个人资料</text>
+      </view>
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50" bindtap="personalResume">
+        <text class="iconfont icon-gerenjian"></text>
+        <text>个人简历</text>
+      </view>
+      <view class="nav-item" hover-class="common-hover"  hover-stay-time="50" bindtap="identity">
+        <text class="iconfont icon-shenfenyanzheng" ></text>
+        <text>身份认证</text>
+      </view>
+    </view>
+
+    <!-- 个人中心列表 -->
+    <view class="personalContent">
+      <view class="cardList">
+        <view class="card-item" hidden="{{isHidden}}" bindtap="sentShow">
+          <text class="title">{{userInfo.identity == 3?'简历投递':'学生简历'}}</text>
+          <text class="more"> > </text>
+        </view>
+        <view class="card-item" hidden="{{isHidden}}" bindtap="invitationShow">
+          <text class="title">邀请函</text>
+          <text class="more"> > </text>
+        </view>
+        <view class="card-item" hidden="{{userInfo.identity == 3 || userInfo.identity == 2 || userInfo == '' || userInfo.identity == 1}}" bindtap="tutorScore">
+          <text class="title">导师评分</text>
+          <text class="more"> > </text>
+        </view>
+        <view class="card-item" bindtap="logOut">
+          <text class="title">退出登录</text>
+          <text class="more"> > </text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

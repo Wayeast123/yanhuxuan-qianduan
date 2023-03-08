@@ -1,0 +1,279 @@
+.blog-list{
+  margin-top: 10rpx;
+}
+
+.blog-panel{
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+
+page{
+  background-color: #f1f1f1;
+}
+
+.blog{
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.blog-title{
+  display: flex;
+  align-items: center;
+}
+
+.blog-portrait{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.blog-time{
+  font-size: 24rpx;
+  color: #939393;
+}
+
+.blog-content{
+  margin: 20rpx 0;
+  font-size: 32rpx;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.blog-img{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.blog-img .img{
+width:230rpx;
+height:230rpx;
+margin-right:10rpx;
+margin-bottom: 10rpx;
+}
+
+.blog-img .img:nth-child(3n){
+  margin-right: 0;
+}
+
+.blog-nickName{
+  font-size: 32rpx;
+}
+
+
+/* 同意组件 */
+.swiper-tab{  
+  width: 100%;  
+  background-color: #fff;
+  display: flex;
+  color: #999;
+  font-size: 28rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.swiper-tab-list{  
+  flex: 1;
+  padding: 28rpx 0;
+  text-align: center;
+}  
+.on{ 
+  color: #4990E2;  
+  border-bottom: 6rpx solid #4990E2;
+}  
+
+
+ /* 新引进 */
+   /* 头部区域横向布局 */
+   .videoContainer .header{
+    display: flex;
+    padding: 10rpx;
+  }
+  /* 图片样式 */
+  .videoContainer .header image{
+    width: 60rpx;
+    height: 60rpx;
+  }
+  
+  .blog-list{
+    margin-top: 10rpx;
+  }
+  
+  .blog-panel{
+    margin-bottom: 20rpx;
+    box-sizing: border-box;
+  }
+  
+  
+  page{
+    background-color: #f1f1f1;
+  }
+  
+  .blog{
+    padding: 20rpx;
+    background-color: #fff;
+  }
+  
+  .blog-title{
+    display: flex;
+    align-items: center;
+  }
+  
+  .blog-portrait{
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+  }
+  
+  .blog-time{
+    font-size: 24rpx;
+    color: #939393;
+  }
+  
+  .blog-content{
+    margin: 20rpx 0;
+    font-size: 32rpx;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .blog-img{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .blog-img .img{
+  width:230rpx;
+  height:230rpx;
+  margin-right:10rpx;
+  margin-bottom: 10rpx;
+  }
+  
+  .blog-img .img:nth-child(3n){
+    margin-right: 0;
+  }
+  
+  .blog-nickName{
+    font-size: 32rpx;
+  }
+  
+  /* 额外组件 */
+  .item{
+    display: flex;
+    width: 100%;
+     background-color: #fff; 
+  }
+  .item-img {
+    padding: 32rpx 28rpx;
+  }
+  .img{
+    width: 120rpx;
+    height: 120rpx;
+  }
+  .item-main{
+    flex: 1;
+    padding: 32rpx 28rpx 32rpx 20rpx;
+    border-bottom: 1rpx solid #dcdcdc;
+    line-height: 1.4;
+  }
+  
+  .job{
+    margin-bottom: 4rpx;
+    padding-right: 80rpx;
+    position: relative;
+  }
+
+  .job-position{
+    font-size: 34rpx;
+    display:flex;
+    align-items: center;
+  }
+  .img1{
+    height: 50rpx;
+    width: 50rpx;
+    border-radius: 50%;
+    margin-right: 30rpx;
+  }
+  .job-Salary{
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #ff9483;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;  
+  }
+  .company{
+    color: rgb(44, 42, 42);
+    font-size: 32rpx;
+    margin-bottom: 4rpx;
+  }
+  .secondary{
+    font-size: 28rpx;
+    color: #999;
+  }
+  .secondary-list{
+    margin-right: 8rpx;
+  }
+  .date{
+    color: #2693FF;
+    float: right;
+    text-align: right;
+    margin-left: 90%;
+  }
+  
+  
+  
+  
+  
+  /* 发送简历 */
+  .ctrl{
+    padding: 20rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    height: 45rpx;
+    margin-bottom: 20rpx;
+    justify-content: flex-start;
+  }
+  
+  .ctrl-item{
+    flex: 1;
+    text-align: center;
+    color: rgba(40, 47,60, 0.8);
+    font-size: 26rpx;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ctrl-item .icon{
+    margin-right: 12rpx;
+    font-size: 32rpx;
+  }
+  
+  .ctrl-item text{
+    font-size: 32rpx;
+  }
+  
+  .share-btn,.button{
+    background-color: #fff;
+    width: 100rpx;
+    /* color: rgba(40, 47,60, 0.8); */
+    padding: 0;
+    height: 50rpx;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button{
+    width: 150rpx;
+  }
+  

@@ -1,0 +1,36 @@
+<!-- 第一层 -->
+<view class="contain">
+  <!-- 第二层 -->
+  <view class="selection" wx:for="{{friendsList}}" wx:key="id" data-userId="{{item.userId}}"  bindtap="formSubmit">
+    <!-- 第三层 循环层-->
+    <view >
+      <!-- 第四层 循环单项具体内容层 设置点击事件，可跳转到聊天页面 -->
+      <form bindsubmit="formSubmit">
+        <view class="item"> <!--bindtap='clickItem'-->
+          <!-- 循环单项左边 -->
+          <view class="item-left">
+            <!-- 头像 -->
+            <view class="subitemimg">
+              <image src="../../img/header/ee.png" class="item-image"></image>
+            </view>
+            <!-- 中间文本内容，包括好友名称和最新的一条消息 -->
+            <view class="subitemtext">
+              <view class="subsubitem">
+                <!-- 好友名称 -->
+                <view>
+                  <text class="item-title">{{item.userName}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <!-- 中间，猜想是起着一个占位的作用 -->
+          <view class="item-center">
+          </view>
+
+        
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

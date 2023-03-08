@@ -1,0 +1,93 @@
+<!--pages/identity/identity.wxml-->
+
+<view class='baseInfo'>
+  <text>基本信息</text>
+</view>
+
+<form bindsubmit="formSubmit">
+    <view class='list'>
+
+        <view class='name'>
+            <text>姓名</text>
+            <input name="name" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的姓名'></input>
+        </view>
+    
+        <view class='sex'>
+            <text>性别</text>
+            <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{Usersex}}" wx:key="index">
+                <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+                </label>
+            </radio-group>
+        </view>
+
+        <view class='phone'>
+            <text>年龄(岁)</text>
+            <input name="age" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的年龄'></input>
+        </view>
+    
+        <view class='phone'>
+            <text>籍贯(省市)</text>
+            <input name="hometown" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入你的籍贯'></input>
+        </view>
+
+        <view class='phone'>
+            <text>身份证</text>
+            <input name="idCardNumber" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入身份证号码'></input>
+        </view>
+
+        <view class='phone'>
+            <text>联系方式</text>
+            <input name="telephone" type='text' placeholder-style='font-size:28rpx;' placeholder='请输入手机号码'></input>
+        </view>
+
+        <view class='identity'>
+            <text style="margin:20rpx;padding-bottom:10rpx;">身份</text>
+            <radio-group class="radio-group" bindchange="radioChange2">
+                <label class="radio" wx:for="{{identity}}" wx:key="index">
+                <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                </label>
+            </radio-group>
+        </view>
+    
+        <!-- 身份证 -->
+        <view class="ID-mian">
+            <view class="card-name"><text style="margin:20rpx;padding-bottom:10rpx;">请上传身份认证材料</text></view>
+            <view class="card-cont">
+                <view class="card-list">
+                    <view class="image-wrap" hidden="{{!idCardFront[0]}}">
+                        <image class="image" src="{{idCardFront[0]}}" mode="aspectFill" bindtap="onPreviewImageFirst" data-index="{{index}}" ></image>
+                        <i class="iconfont icon-shanchu" bindtap="onDelImageFirst" data-index="{{index}}"></i>
+                    </view>
+                    <view class="image-wrap selectphoto" bindtap="onChooseImageFirst" hidden="{{idCardFront[0]}}">    
+                        <image src='../../static/images/identity-zm.png' id="1" mode='aspectFit'></image>
+                    </view>
+                    <view>身份证正面照</view>
+                </view>
+                <view class="card-list">
+                    <view class="image-wrap" hidden="{{!idCardBack[0]}}">
+                        <image class="image" src="{{idCardBack[0]}}" mode="aspectFill" bindtap="onPreviewImageSecond" data-index="{{index}}" ></image>
+                        <i class="iconfont icon-shanchu" bindtap="onDelImageSecond" data-index="{{index}}"></i>
+                    </view>
+                    <view class="image-wrap selectphoto" bindtap="onChooseImageSecond" hidden="{{idCardBack[0]}}">
+                        <image src='../../static/images/shenfen-beimian.png' id="2" mode='aspectFit'></image>
+                    </view>
+                    <view>身份证反面照</view>
+                </view>
+                <view class="card-list">
+                    <view class="image-wrap" hidden="{{!certificate[0]}}">
+                        <image class="image" src="{{certificate[0]}}" mode="aspectFill" bindtap="onPreviewImageThird" data-index="{{index}}" ></image>
+                        <i class="iconfont icon-shanchu" bindtap="onDelImageThird" data-index="{{index}}"></i>
+                    </view>
+                    <view class="image-wrap selectphoto" bindtap="onChooseImageThird" hidden="{{certificate[0]}}">
+                        <image src='../../static/images/identity-sc.png' id="3" mode='aspectFit'></image>
+                    </view>
+                    <view>手持证件照</view>
+                </view>
+            </view>
+        </view>
+     </view>
+     
+    <button class='button' formType="submit" name="dosubmit">提交信息</button>
+
+</form>

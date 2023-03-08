@@ -1,0 +1,33 @@
+<!--pages/register/rejister.wxml-->
+<view class="container">
+  <view class="wrapper">
+    <view class="left-top-sign">WELCOME</view>
+    <view class="welcome">
+      欢迎注册！
+    </view>
+    <view class="input-content">
+      <view class="input-item">
+        <!-- <text class="tit">昵称</text> -->
+        <input  type="text" placeholder="昵称" data-type="string" id="nick" bindinput="handleInput"/>
+      </view>
+      <view class="input-item">
+        <!-- <text class="tit">账号</text> -->
+        <input  type="text" placeholder="账户名" data-type="string" id="account" bindinput="handleInput"/>
+      </view>
+      <view class="input-item">
+        <!-- <text class="tit">电话号码</text> -->
+        <input  type="text" placeholder="电话号码" data-type="string" id="telephone" bindinput="handleInput"/>
+      </view>
+      <view class="input-item">
+        <!-- <text class="tit">密码</text> -->
+        <input type="password"  placeholder="请输入密码" data-type="password" id="password" bindinput="handleInput"/>
+      </view>
+      <view class="input-item">
+        <!-- <text class="tit">再次输入密码</text> -->
+        <input  type="password" placeholder="请再次输入密码" data-type="password" id="again_password" bindinput="handleInput"/>
+      </view>
+    </view>
+    <button class="confirm-btn" bindtap="register">注册</button>
+  </view>
+  
+</view>

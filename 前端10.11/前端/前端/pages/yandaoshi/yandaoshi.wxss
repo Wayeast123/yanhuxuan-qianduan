@@ -1,0 +1,273 @@
+/* pages/yandaoshi/yandaoshi.wxss */
+page{
+  background-color: white;
+}
+
+
+/* 标题组件 */
+
+
+.iconfont{
+  font-size:52rpx;
+}
+
+.shoucang{
+  margin: auto;
+}
+
+.title{
+  /* display:inline-block; */
+  display: inline-block;
+  font-size: 40rpx;
+  line-height: 74rpx;
+}
+
+.text-center{
+  text-align: center;
+  padding: 20rpx;
+  background-color: white;
+}
+
+.navigator {
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.fl{
+  float: left;
+  padding: 10rpx;
+}
+
+.xs{
+  margin-top: auto;
+}
+
+.fr{
+  float: right;
+}
+
+.padding-xs {
+  /* padding: 10rpx; */
+  height: 80rpx;
+}
+.xs1{
+  height: 130rpx;
+}
+
+.xs{
+  margin: auto 20rpx;
+}
+
+.margin-right-lg {
+  margin-right: 0rpx;
+}
+
+/* 头部组件 */
+.bar{
+  height: 60rpx;
+  color: red;
+  background-color: red;
+  /* background-color:rgb(240, 190, 125); */
+}
+
+/* 身份组件 */
+.el-container{
+  display: flex;
+  width: 100%;
+  height: 170rpx;
+}
+.doctor-image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+}
+
+.doctor-image {
+  margin: 20rpx;
+  width: 150rpx;
+  height: 136rpx;
+}
+.doctor-image>image{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.margin-right-lg {
+  margin-right: 40rpx;
+}
+.margin-top-lg {
+  margin-top: 40rpx;
+}
+
+/* 回答组件 */
+
+.flex {
+  display: flex;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.margin-lr-xs {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.flex-treble {
+  flex: 3;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+.text-black{
+  font-size: 24rpx;
+}
+
+.text-lg {
+  font-size: 32rpx;
+}
+.padding-bottom-xs {
+  padding-bottom: 5rpx;
+}
+.text-xs {
+  font-size: 20rpx;
+}
+.padding-left-xs {
+  padding-left: 10rpx;
+}
+.xuezhang{
+  padding-left: 0rpx;
+}
+.padding-sm {
+  padding: 20rpx;
+  position: relative;
+  left: 50rpx;
+}
+.margin-lr-xs {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.box{
+  height: 100%;
+  width: 50%;
+  /* background-color: violet; */
+  /* margin-left: 50rpx; */
+  position: absolute; right: 7rpx; top: 0px;
+   width: 150rpx; 
+   height: 15%;
+   display: flex;
+   flex-direction: column;
+  justify-content: space-evenly;
+  }
+.guanzhu{
+  /* color: green; */
+  border:1rpx solid rgb(34, 149, 255);
+  /* background-color: red; */
+  /* height: 80rpx; */
+  /* width: 100%; */
+  /* line-height: 80rpx; */
+  /* padding: 0rpx auto; */
+  text-align: center;
+  color: rgb(34, 149, 255); 
+  border-radius: 4px;
+}
+.liaotian{
+  color: blue;
+  /* height: 80rpx; */
+  border:1rpx solid rgb(34, 149, 255);
+  text-align: center;
+  color: rgb(34, 149, 255); 
+  border-radius: 4px;
+}
+.padding-xs {
+  padding: 10rpx;
+}
+.icon-unie64b{
+  font-family: "cuIcon";
+    font-size: inherit;
+    font-style: normal;
+}
+
+/* 选择组件 */
+.swiper-tab{
+  width: 100%;  
+  background-color: #fff;
+  display: flex;
+  color: #999;
+  font-size: 28rpx;
+  border-bottom: 1px solid #dcdcdc;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.swiper-tab-list{  
+  flex: 1;
+  padding: 28rpx 0;
+  text-align: center;
+}  
+.on{ 
+  color: #4990E2;  
+  border-bottom: 6rpx solid #4990E2;
+  }  
+
+.detail{
+  height: 300rpx;
+  background-color: #fff;
+}
+
+/* 细节组件 */
+.content-bar{
+  margin-left: 20rpx;
+}
+
+.content1{
+  margin-top: 5rpx;
+  margin-left: 26px;
+  height: 6rpx;
+  font-size: 15px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.content{
+  margin-top: 50rpx;
+  margin-left: 26px;
+  height: 6rpx;
+  font-size: 15px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.recent-see {
+  margin-top: 6rpx;
+  padding: 0 20rpx;
+  width: 100%;
+}
+.recent-see .icon {
+  display: inline-block;
+  margin-left: 0rpx;
+  margin-right: 10rpx;
+  width: 6rpx;
+  height: 4rpx;
+  background: #0D77F2;
+  border-radius: 3rpx;
+  vertical-align: middle;
+}
+.recent-see .title {
+  display: inline-block;
+  /* font-family: PingFangSC-Semibold; */
+  font-size: 15px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.tedian{
+  margin-left: 20rpx;
+}

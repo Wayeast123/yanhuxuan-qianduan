@@ -1,0 +1,75 @@
+<!-- 官方推送 begin -->
+  <view class="guanfang">
+    <view class="guanfang1">
+      <image src="../../static/guanfang.png" class="img1"></image>
+    </view>
+    <view class="guanfang2">
+      <view class="guanfang21">活动通知</view>
+      <view class="guanfang22">本活动面向使用研互选小程序的18岁以上</view>
+    </view>
+  </view>
+<!-- 官方推送 end -->
+
+<!-- 通讯录 begin -->
+
+<!-- 通讯录 end -->
+
+<!-- 好友通讯录 begin -->
+<!-- 好友通讯录 end -->
+
+<!-- 找研友 begin  -->
+<!-- 找研友 end  -->
+
+<!-- 第一层 -->
+<view class="contain">
+  <!-- 第二层 -->
+  <view class="selection"  wx:for="{{chatList}}" wx:key="id" data-userId="{{item.sendId}}"  bindtap="formSubmit">
+    <!-- 第三层 循环层-->
+    <view>
+      <!-- 第四层 循环单项具体内容层 设置点击事件，可跳转到聊天页面 -->
+      <form bindsubmit="formSubmit">
+        <view class="item" type="submit" > <!--bindtap='clickItem'-->
+          <!-- 循环单项左边 -->
+          <view class="item-left">
+            <!-- 头像 -->
+            <view class="subitemimg">
+              <image src="../../img/header/ee.png" class="item-image"></image>
+            </view>
+            <!-- 中间文本内容，包括好友名称和最新的一条消息 -->
+            <view class="subitemtext">
+              <view class="subsubitem">
+                <!-- 好友名称 -->
+                <view>
+                  <text class="item-title">{{item.sendName}}</text>
+                </view>
+                <!-- 显示最新一条消息内容 -->
+                <view>
+                  <text class="item-title smalltext">{{item.sendContent}}</text>
+                </view>
+              </view>
+            </view>
+
+          </view>
+          <!-- 中间，猜想是起着一个占位的作用 -->
+          <!-- <view class="item-center">
+          </view> -->
+
+          <!-- 右边，时间 和 是否有未读消息的红点提示 -->
+          <view class="item-right smalltext">
+            <!-- 时间 -->
+            <text>{{item.sentTime}}</text>
+
+            <view class='item-right-s'>
+            </view>
+            <!-- 红点（未读消息），可在这里做判断，如果isRead有内容，则显示未读 -->
+            <!-- <view class='item-right-s'>
+              <image src='{{item.readStatus == 0 ? "../../img/dot.png" : "" }}' class='item-right-s'></image>
+            </view> -->
+          </view>
+
+          
+        </view>
+      </form>
+    </view>
+  </view>
+</view>

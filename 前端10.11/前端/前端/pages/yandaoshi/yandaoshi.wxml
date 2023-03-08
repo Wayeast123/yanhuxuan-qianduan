@@ -1,0 +1,83 @@
+<!-- <view class="bar" >
+  <view class="text-center padding-sm">
+    <navigator class="fl" open-type="navigateBack" hover-class="none">
+        <el-button small="lg" icon="iconfont icon-fenxiang" class="iconfont icon-fenxiang"
+                   text-colour="#000000"
+                   colour="rgba(255,255,255,0)" />
+    </navigator>
+    <view class="title">学长详情</view>
+    <view class="fr iconfont icon-shoucang padding-xs margin-right-lg"></view>
+  </view>
+</view> -->
+
+<view class="el-container" style="border-bottom:1px solid #f0f0f0;">
+  <view class="doctor-image">
+    <image src="../../static/user.png"></image>
+  </view>
+  <view class="padding-xs xs xs1">
+    <view class="padding-left-xs xuezhang" style="font-size: 24rpx;color: rgb(18, 196, 18);">清华大学 软件工程</view>
+    <view class="padding-bottom-xs" style="font-weight:inherit;margin-top: 5rpx;">梁学长</view>
+    <view class="text-black" style="font-size:24rpx;color: rgb(18, 196, 18);">初试成绩：556分</view>
+  <view class="text-black" style="font-size:24rpx;color: rgb(18, 196, 18);">复试成绩：233分</view>
+    <!-- <view class="text-black" style="font-size:24rpx;color: blue;">初试成绩：556分</view>
+  <view class="text-black" style="font-size:24rpx;color: blue;">复试成绩：233分</view> -->
+  </view>
+  <!-- <view class="margin-top-lg margin-right-lg">
+  <el-button small="sm" round name="关注"
+   colour="linear-gradient(90deg,rgba(106,255,128,1) 0%,rgba(117,140,219,1) 100%)" />
+  </view> -->
+  <!-- <view class="iconfont icon-shoucang shoucang"></view> -->
+  <view class="box">
+    <view class="guanzhu">
+    <text style="font-size: 35rpx;">+</text>
+    关注</view>
+    <view class="liaotian">发起聊天</view>
+  </view>
+</view>
+
+<!-- 回答组件 -->
+<view class="flex  p-xs padding-tb-sm mb-sm solid-bottom" style="display: flex;">
+  <view class="flex-treble padding-sm margin-lr-xs" style="border-right: 1px solid #f0f0f0;">
+    <view class="fl padding-xs">
+      <view class="text-black text-bold text-lg padding-bottom-xs text-center" style="margin: auto;">5年</view>
+      <view class="text-black text-xs padding-left-xs" style="text-align: center;">已毕业年限</view>
+    </view>
+  </view>
+  <view class="flex-treble padding-sm margin-lr-xs" style="border-right: 1px solid #f0f0f0;">
+    <view class="fl padding-xs">
+      <view class="text-black text-bold  text-lg padding-bottom-xs text-center" style="margin: auto;">104次</view>
+      <view class="text-black text-xs padding-left-xs" style="text-align: center;">回答次数</view>
+    </view>
+  </view>
+  <view class="flex-treble padding-sm margin-lr-xs">
+    <view class="fl padding-xs">
+      <view class="text-black text-bold  text-lg padding-bottom-xs text-center" style="padding:0 auto;">4.0分</view>
+      <text class="iconfont .icon-unie64b text-olive" style="color:#8DC63F" wx:for="{{4}}" wx:key="this"></text>
+    </view>
+  </view>
+</view>
+
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="introduce">个人介绍</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="exp">考研经验</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="sell">读研经历</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="fudao">在售资料</view>
+</view>
+
+<view class="detail">
+  <view class="recent-see">
+    <view class="icon"></view>
+    <text class="title">录取信息</text>
+  </view>
+  <view class="content1"><text style="color: rgb(155, 155, 155,1);">录取院校：</text><text style="color: rgb(22, 21, 21);">清华大学</text></view>
+  <view class="content"><text style="color: rgb(155, 155, 155,1);">录取专业：</text><text style="color: rgb(22, 21, 21);">软件工程</text></view>
+  <view class="content"><text style="color: rgb(155, 155, 155,1);">原学校名称：</text><text style="color: rgb(22, 21, 21);">五邑大学</text> </view>
+  <view class="content"><text style="color: rgb(155, 155, 155,1);">原专业名称： </text><text style="color: rgb(22, 21, 21);">软件工程</text></view>
+  <!-- <view class="content">初试分数：425分</view>
+  <view class="content">复试分数：322分</view> -->
+</view>
+<view class="recent-see">
+  <view class="icon"></view>
+  <text class="title">个人特点</text>
+  <view class="tedian">描述</view>
+</view>

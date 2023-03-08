@@ -1,0 +1,46 @@
+<!--pages/my/my.wxml-->
+<view class="container" >
+  <view class="top-bg"></view>
+
+  <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src='{{userInfo.headImage ? userInfo.headImage : "/static/images/personal/missing-face.png"}}' mode="cover"></image>
+      <text class="nickname">{{userInfo.userName}}</text>
+      <view class="1">
+        <text class="deadline"> <i class="iconfont icon-shanchu"></i>学校:{{userInfo.schoolName}}</text>
+        <text class="deadline1"><i class="iconfont icon-shanchu"></i>电话:{{userInfo.telephone}}</text>
+      </view>
+      <view class="1">
+        <text class="deadline"><i class="iconfont icon-shanchu"></i>专业:{{userInfo.majorName}}</text>
+        <text class="deadline2"><i class="iconfont icon-shanchu"></i>邮箱:</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="recent-see">
+    <view class="icon"></view>
+    <text class="title">个人简介</text>
+  </view>
+  <text id="content" class="content">{{userInfo.content}}</text>
+</view>
+
+<!-- <view class="recent-see">
+    <view class="icon"></view>
+    <text class="title">发展方向</text>
+  </view>
+  <text id="content" class="content">{{userInfo.content}}</text>
+</view> -->
+
+<!-- 评分组件 -->
+<view class="star">
+  <block wx:for="{{stars}}" wx:key="id">
+    <image class="star-image" style="left: {{item*100}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+      <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+      <view class="item" style="left:50rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+    </image>
+  </block>
+</view>
+<button class='button' bindtap="post">确认评分</button>
+
+
+

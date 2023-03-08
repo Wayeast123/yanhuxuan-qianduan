@@ -1,0 +1,88 @@
+<!-- 头部区域 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="wait">待同意</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="agree">已同意</view>
+</view>
+
+<!-- 信息列表 -->
+<view class="blog-list">
+        <block wx:for="{{infoList}}" wx:key="*this">
+                <view class="item">
+                    <view class="item-main">
+                        <view class="job">
+                           <view class="job-position" data-id="{{id}}">
+                              <image src="../../img/header/cc.png" class="img1"></image>
+                              <text>{{item.sendName}}</text>
+                              </view>
+                        </view>
+                        <view class="secondary">
+                            <text class="secondary-list">{{item.sendSchool}}</text>
+                            <text class="secondary-list">{{item.sendMajor}}</text>
+                            <text>{{item.sendTelephone}}</text>
+                            <view class="blog-time">{{item.createTime}}</view>
+                        </view>
+                        <view class="company">
+                            <text>{{item.sendContent}}</text>
+                        </view>
+                    </view>
+                </view>
+                <!-- 准研究生 -->
+                <view hidden="{{!isStudent}}">
+                    <view class="ctrl">
+                        <view class="ctrl-item">
+                            <form bindsubmit="formSubmit">
+                                <input name="id" value="{{item.id}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                <button class='button' formType="submit" hover-class="share-hover">
+                                    <text style="font-size:26rpx">{{isWithdraw ? '撤回':'取消'}}</text>
+                                </button>
+                            </form>
+                        </view>
+                        <view class="ctrl-item share" hidden="{{isWithdraw}}">
+                            <form bindsubmit="studentChat">
+                                <!-- 这里的33有问题 -->
+                                <input name="objectId" value="33" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                <button class="share-btn" formType="submit" hover-class="share-hover">
+                                    <text style="font-size:26rpx">发起聊天</text>
+                                </button>
+                            </form>
+                        </view>
+                    </view>
+                </view>
+               
+                <!-- 导师 -->
+                <view hidden="{{!isTeacher}}">
+                    <view class="ctrl">
+                        <view class="ctrl-item">
+                            <form bindsubmit="clickAgree">
+                                <input name="id" value="{{item.id}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                <button class="button" formType="submit" hidden="{{isHidden}}">
+                                    <text style="font-size:26rpx">同意</text>
+                                </button>
+                            </form>
+
+                            <form bindsubmit="formSubmit">
+                                <input name="id" value="{{item.id}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                <button class="button"  formType="submit" hidden="{{isHidden}}">
+                                    <text style="font-size:26rpx">不同意</text>
+                                </button>
+                            </form>
+                        </view>
+                        <view class="ctrl-item share">
+                            <form bindsubmit="formSubmit">
+                                <input name="id" value="{{item.id}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                <button class="button" formType="submit" hidden="{{!isHidden}}">
+                                    <text style="font-size:26rpx">取消意向</text>
+                                </button>
+                            </form>
+
+                            <form bindsubmit="teacherCaht">
+                                <input name="userId" value="{{item.sendId}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                <button class="button" formType="submit" hidden="{{!isHidden}}">
+                                    <text style="font-size:26rpx">发起聊天</text>
+                                </button>
+                            </form>
+                        </view>
+                    </view>    
+                </view>    
+        </block>   
+</view>

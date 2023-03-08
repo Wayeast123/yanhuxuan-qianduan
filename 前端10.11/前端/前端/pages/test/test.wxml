@@ -1,0 +1,99 @@
+<!-- 轮播图 -->
+<view class="index_selection">
+  <view class="index_swiperBanner">
+    <swiper indicator-dots="true" autoplay="true" circular="true" indicator-active-color="white" interval="3000" duration="500">
+      <swiper-item wx:for="{{imgurls}}" wx:key="imgurls" wx:for-item="itemName">
+          <image src="{{itemName.url}}"/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- <view class="index_search">
+    <input type="text" placeholder="输入搜索关键词" value="{{name}}" bindconfirm="bindconfirm"/>
+    <icon size="20" type='search'/>
+  </view> -->
+</view>
+
+<!-- 官方通知(也是轮播图，只是是纵向的) -->
+<view class="index_notice-box">
+  <view class="index_notice">
+    <image src="../../static/images/notice center.png"/>
+    <swiper class="index_notice_swiper" vertical="true" autoplay="true" circular="true" interval="2000" duration="1000">
+      <!-- 以list的key作为点击标识对跳转后页面获取数据提供依据，页面从数据库获取的数据存到全局变量，点击时判断是哪个模块点击确定要从哪个全局list变量里取数据，事件处理判断点击了哪个 -->
+      <swiper-item wx:for="{{guanfanctivity}}"  wx:key="guanfanctivity" bindtap="offonclick">
+        <view class="index_notice_itemr">{{item.content}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="index_more"><navigator url="/pages/notice/index">更多 ></navigator></view>
+</view>
+
+<!-- 链接 -->
+<view class="index_plate">
+  <navigator class="index_plate-item" url="/pages/US/US" open-type="redirect" hover-class="other-navigetor-hover">
+    <view class="index_plate-item-img"><image src="../../static/images/huodong.png"/></view>
+    <view class="index_plate-item-info">活动资讯</view>
+  </navigator>
+  <navigator class="index_plate-item" url="/pages/informationRelease/informationRelease" open-type="redirect" hover-class="other-navigetor-hover">
+    <view class="index_plate-item-img"><image src="../../static/images/blog.png"/></view>
+    <view class="index_plate-item-info">博客空间</view>
+  </navigator>
+  <navigator class="index_plate-item" url="/pages/resume/resume" open-type="redirect" hover-class="other-navigetor-hover">
+    <view class="index_plate-item-img"><image src="../../static/images/jianlizoom.png"/></view>
+    <view class="index_plate-item-info">简历空间</view>
+  </navigator>
+  <navigator class="index_plate-item" url="/pages/US/US" open-type="redirect" hover-class="other-navigetor-hover">
+    <view class="index_plate-item-img"><image src="../../static/images/connect.png"/></view>
+    <view class="index_plate-item-info">联系我们</view>
+  </navigator>
+</view>
+<!-- 猜你喜欢 -->
+<view class="index_header">
+  <text class="index_header_title">猜你喜欢</text>
+  <navigator url="/pages/US/US" class="index_header_order">更多推荐 ></navigator>
+</view>
+<!-- <view class="index_like"> -->
+<!-- 以list的key作为点击标识对跳转后页面获取数据提供依据，页面从数据库获取的数据存到全局变量，点击时判断是哪个模块点击确定要从哪个全局list变量里取数据 -->
+  <!-- <view class="index_like-item" wx:for="{{likeActivity}}" data-key="{{index}}" bindtap="likeonclick"> -->
+    <!-- <image src="{{item.url}}"/> -->
+    <!-- <view class="index_like-item-text">{{item.text}}</view> -->
+  <!-- </view> -->
+<!-- </view> -->
+<!-- 热门活动 -->
+<view class="index_header">
+  <text class="index_header_title">热门活动</text>
+</view>
+<!-- <view class="index_max"> -->
+  <!-- <scroll-view scroll-x="true"> -->
+  <!-- 一个滚动视图，可以对超出部分进行滚动处理，同样以key作为点击标识 -->
+    <!-- <view class="index_max-scroll" scroll-x="true" > -->
+      <!-- <view class="index_max-scroll-item" wx:for="{{maxActivity}}" data-key="{{index}}" bindtap="maxonclick"> -->
+        <!-- <image src="{{item.url}}"></image> -->
+      <!-- </view> -->
+      <!-- <navigator class="index_max-scroll-item"> -->
+        <!-- 点击查看更多 > -->
+      <!-- </navigator> -->
+    <!-- </view> -->
+  <!-- </scroll-view> -->
+<!-- </view> -->
+<!-- 最新活动 -->
+<view class="index_header">
+  <text class="index_header_title">最新活动</text>
+  <navigator url="/pages/US/US" class="index_header_order">全部活动 ></navigator>
+</view>
+<view class="index_list-item" wx:for="{{newActivity}}" wx:key="newActivity" data-key="{{index}}" bindtap="newonclick">
+  <view class="index_list-item-images">
+    <image src="{{item.url}}" class="index_list-item-images-img"/>
+    <image src="{{item.url}}" class="index_list-item-images-avatar"/>
+  </view>
+  <view class="index_list-item-text">
+    <view class="index_list-item-text-title">
+      <text>{{item.text}}</text>
+    </view>
+    <view class="index_list-item-text-content">
+      <text>{{item.content}}</text>
+    </view>
+  </view>
+</view>
+<view class="weui-loadmore weui-loadmore_line" style='margin-top:60rpx;margin-bottom:30rpx;'>
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多啦</view>
+</view>

@@ -1,0 +1,371 @@
+/* pages/personal/personal.wxss */
+.personalContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.personalContainer .user-section {
+  height: 380rpx;
+  position: relative;
+  padding: 100rpx 30rpx 0;
+}
+.user-section .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+
+.user-info-box{
+  height: 180rpx;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index: 1;
+
+}
+
+.user-info-box .portrait{
+  width: 130rpx;
+  height: 130rpx;
+  border:5rpx solid #fff;
+  border-radius: 50%;
+}
+.user-info-box .username{
+  font-family: PingFangSC-Semibold;
+  font-size: 17px;
+  color: #333333;
+  margin-left: 20rpx;
+}
+
+
+/* vip-box */
+.vip-card-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+ background: linear-gradient(left, red, black);
+  background: rgba(0, 0, 0, .7);
+  height: 240rpx;
+  color: #f7d680;
+  border-radius: 16rpx 16rpx 0 0;
+  padding: 20rpx 24rpx;
+}
+
+
+.vip-card-box .card-bg{
+  position:absolute;
+  top: 20rpx;
+  right: 0;
+  width: 380rpx;
+  height: 260rpx;
+}
+
+.vip-card-box .b-btn{
+  position: absolute;
+  right: 20rpx;
+  top: 16rpx;
+  width: 132rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  color: #36343c;
+  border-radius: 20px;
+  background: #f9e6af;
+  z-index: 1;
+}
+
+.vip-card-box .b-btn{
+  position: absolute;
+  right: 20rpx;
+  top: 16rpx;
+  width: 132rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  color: #36343c;
+  border-radius: 20px;
+  /*background: linear-gradient(left, #f9e6af, #ffd465);*/ /*渐变不生效*/
+  background: #f9e6af;
+  z-index: 1;
+}
+
+.vip-card-box .tit {
+  font-size: 22rpx;
+  color: #f7d680;
+  margin-bottom: 28rpx;
+}
+.vip-card-box .tit .iconfont{
+  color: #f6e5a3;
+  margin-right: 16rpx;
+}
+
+
+
+
+.vip-card-box .e-m{
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+.vip-card-box .e-b{
+  font-size: 24rpx;
+  color: #d8cba9;
+  margin-top: 10rpx;
+}
+
+
+.cover-container{
+  margin-top: -160rpx;
+  padding: 0 30rpx;
+  position:relative;
+  background: #f5f5f5;
+  padding-bottom: 20rpx;
+}
+
+.cover-container .arc{
+  position:absolute;
+  left: 0;
+  top: -34rpx;
+  width: 100%;
+  height: 36rpx;
+}
+
+
+/* 导航部分 */
+.cover-container .nav-section {
+  display: flex;
+  background: #fff;
+  padding: 20rpx 0;
+  border-radius: 15rpx;
+  margin-top: 200rpx;
+}
+
+
+.nav-section .nav-item {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-section .nav-item .iconfont {
+  font-size: 65rpx;
+  color: #1A91EA;
+  line-height: 70rpx;
+}
+
+.nav-section .nav-item text:last-child {
+  font-size: 26rpx;
+
+}
+
+
+/* 个人中心列表 */
+.personalContent {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+/* 最近播放 */
+.personalContent .scrollView {
+  display: flex;
+  height: 160rpx;
+}
+.personalContent .recentPlay {
+  display: flex;
+}
+
+.recentPlayContainer .title {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 80rpx;
+}
+
+.personalContent .recentPlay image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 20rpx;
+  border-radius: 20rpx;
+}
+
+
+.cardList {
+  margin-top: 20rpx;
+
+}
+.cardList .card-item{
+  border-top: 1rpx solid #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 10rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+.cardList .card-item .more {
+  float: right;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 36rpx;
+  line-height: 80rpx;
+  position: relative;
+  top: -5rpx;
+}
+
+/* 最近播放记录的样式 */
+.recentScroll{
+  display: flex;
+  height: 200rpx;
+}
+.recentItem{
+  margin-left: 20rpx;
+}
+/* 在.recentItem image设置完成后 会发现有很长的高 是scroll-view的问题 */
+.recentItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.username1{
+  font-size: 24rpx;
+  color: #303133;
+  /* margin-left: 20rpx; */
+  float: right;
+}
+
+/* 后来组件 */
+/* pages/my/my.wxss */
+.top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #356CFE;
+  height: 262rpx;
+  border-radius: 0 0 50% 50%;
+}
+
+.userinfo {
+  margin-left: 26rpx;
+  position: relative;
+  margin-top: 134rpx;
+  z-index: 99;
+  background: #FFFFFF;
+  box-shadow: 0 4rpx 8rpx 2rpx rgba(0,0,0,0.18);
+  border-radius: 16rpx;
+  width: 698rpx;
+  height: 265rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+
+.userinfo-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+}
+
+.nickname {
+  margin-top: 90rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 17px;
+  color: #333333;
+}
+
+.deadline {
+  margin-top: 14rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 10px;
+  color: #666666;
+}
+.recent-see {
+  margin-top: 36rpx;
+  padding: 0 24px;
+  width: 100%;
+}
+.recent-see .icon {
+  display: inline-block;
+  margin-left: 26rpx;
+  margin-right: 10rpx;
+  width: 6rpx;
+  height: 34rpx;
+  background: #0D77F2;
+  border-radius: 3rpx;
+  vertical-align: middle;
+}
+.recent-see .title {
+  display: inline-block;
+  font-family: PingFangSC-Semibold;
+  font-size: 18px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.record-item {
+  margin-top: 32rpx;
+  width: 100%;
+}
+
+.record-item .date {
+  margin-left: 44rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.articles-wrapper {
+  margin: 18rpx 26rpx;
+  padding: 0 36rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 4rpx 2rpx rgba(0,0,0,0.17);
+  border-radius: 16rpx;
+}
+
+.article-item {
+  height: 108rpx;
+  line-height: 108rpx;
+  border-bottom: 2rpx solid #F0F0F0;
+}
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-item .icon {
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.article-item .name {
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+/* 测试 */
+.iconfont ,icon-shanchu{
+  margin-right: 0rpx;
+  font-size: 25rpx;
+  color:  #363636;
+  line-height: 10rpx;
+}

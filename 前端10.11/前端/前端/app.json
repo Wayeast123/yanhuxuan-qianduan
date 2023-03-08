@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/test/test",
+    "pages/yandaoshi-lib/yandaoshi-lib",
+    "pages/informationRelease/informationRelease",
+    "pages/login/login",
+    "pages/personalPage/personalPage",
+    "pages/personalResume/personalResume",
+    "pages/messages/messages",
+    "pages/register/register",
+    "pages/releaseScreen/releaseScreen",
+    "pages/tutorPublish/tutorPublish",
+    "pages/identity/identity",
+    "pages/releaseScreenShow/releaseScreenShow",
+    "pages/resume/resume",
+    "pages/resume-fenlei/resume-fenlei",
+    "pages/resume-fenleiShow/resume-fenleiShow",
+    "pages/resume-sent/resume-sent",
+    "pages/sentShow/sentShow",
+    "pages/InvitationShow/InvitationShow",
+    "pages/chatPersonal/chatPersonal",
+    "pages/myFriends/myFriends",
+    "pages/myCollect/myCollect",
+    "pages/test1/test1",
+    "pages/tutorScore/tutorScore",
+    "pages/personalSignature/personalSignature",
+    "pages/test2/test2",
+    "pages/xuezhang/xuezhang",
+    "pages/yandaoshi/yandaoshi"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2693FF",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "研互选",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/test/test",
+        "text": "研导师",
+        "iconPath": "/static/images/daoshi1.png",
+        "selectedIconPath": "/static/images/daoshi.png"
+      },
+      {
+        "pagePath": "pages/yandaoshi-lib/yandaoshi-lib",
+        "text": "研学长",
+        "iconPath": "/static/images/xuezhang.png",
+        "selectedIconPath": "/static/images/xuezhang1.png"
+      },
+      {
+        "pagePath": "pages/messages/messages",
+        "text": "消息",
+        "iconPath": "/static/images/message.png",
+        "selectedIconPath": "/static/images/message2.png"
+      },
+      {
+        "pagePath": "pages/personalPage/personalPage",
+        "text": "个人中心",
+        "iconPath": "/static/images/person.png",
+        "selectedIconPath": "/static/images/person1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

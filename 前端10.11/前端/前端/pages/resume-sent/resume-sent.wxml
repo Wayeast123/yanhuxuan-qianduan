@@ -1,0 +1,32 @@
+<view class='baseInfo'>
+  <text>个人简历信息</text>
+</view>
+
+<view class='list'>
+    <view class='name'>
+        <text>姓名</text>
+        <input id="name" type='text' placeholder-style='font-size:28rpx;' value="{{personalResume.userName}}"  bindinput="handleInput"></input>
+    </view>
+    
+    <view class='name'>
+        <text>学校</text>
+        <input id="schoolName" type='text' placeholder-style='font-size:28rpx;' value="{{personalResume.schoolName}}"  bindinput="handleInput"></input>
+    </view>
+
+    <view class='name'>
+        <text>专业</text>
+        <input id="majorName" type='text' placeholder-style='font-size:28rpx;' value="{{personalResume.majorName}}"  bindinput="handleInput"></input>
+    </view>
+    
+    <view class='name'>
+        <text>电话</text>
+        <input id="telephone" type='number' placeholder-style='font-size:28rpx;' value="{{personalResume.telephone}}" bindinput="handleInput"></input>
+    </view>
+
+    <view class='phone'>
+        <view>个人简介</view>
+        <textarea id="content" type='text' placeholder-style='font-size:58rpx;' value="{{personalResume.content}}" bindinput="handleInput" maxlength="400"></textarea>
+    </view>
+    
+    <button class='button' bindtap="sent">确认发送</button>
+</view>

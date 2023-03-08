@@ -1,0 +1,122 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": false,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.16.0",
+  "appid": "wxbb898bdf82be3d19",
+  "projectname": "%E5%89%8D%E7%AB%AF8.31",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "staticServerOptions": {
+    "baseURL": "",
+    "servePath": ""
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "pages/test1/test1",
+          "pathName": "pages/test1/test1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tutorScore/tutorScore",
+          "pathName": "pages/tutorScore/tutorScore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "components/NavHeader/NavHeader",
+          "pathName": "components/NavHeader/NavHeader",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/special/special",
+          "pathName": "pages/special/special",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "pages/test2/test2",
+          "pathName": "pages/test2/test2",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

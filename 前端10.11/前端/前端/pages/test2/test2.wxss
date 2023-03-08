@@ -1,0 +1,150 @@
+/* pages/my/my.wxss */
+.top-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #356CFE;
+  height: 262rpx;
+  border-radius: 0 0 50% 50%;
+  
+}
+
+.userinfo {
+  margin-left: 24rpx;
+  position: relative;
+  margin-top: 134rpx;
+  z-index: 99;
+  background: #FFFFFF;
+  box-shadow: 0 4rpx 8rpx 2rpx rgba(0,0,0,0.18);
+  border-radius: 16rpx;
+  width: 698rpx;
+  height: 270rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.userinfo-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+}
+
+.nickname {
+  text-align: center;
+  /* margin-left: 40%; */
+  margin-top: 90rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 20px;
+  color: #333333;
+}
+
+.deadline {
+  width: 15rpx;
+  margin-left: 15%;
+  margin-top: 14rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+}
+
+.deadline1 {
+  margin-left: 40rpx;
+  margin-top: 14rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+}
+
+.deadline2 {
+  margin-left: 90rpx;
+  margin-top: 14rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 14px;
+  color: #666666;
+}
+
+.content-bar{
+  margin-left: 20rpx;
+}
+
+.content{
+  width: 100%;
+  line-height:5rpx;
+}
+
+.recent-see {
+  margin-top: 36rpx;
+  padding: 0 20rpx;
+  width: 100%;
+}
+.recent-see .icon {
+  display: inline-block;
+  margin-left: 0rpx;
+  margin-right: 10rpx;
+  width: 6rpx;
+  height: 34rpx;
+  background: #0D77F2;
+  border-radius: 3rpx;
+  vertical-align: middle;
+}
+.recent-see .title {
+  display: inline-block;
+  font-family: PingFangSC-Semibold;
+  font-size: 18px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.record-item {
+  margin-top: 32rpx;
+  width: 100%;
+}
+
+.record-item .date {
+  margin-left: 44rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.articles-wrapper {
+  margin: 18rpx 26rpx;
+  padding: 0 36rpx;
+  background: #FFFFFF;
+  box-shadow: 0 2rpx 4rpx 2rpx rgba(0,0,0,0.17);
+  border-radius: 16rpx;
+}
+
+.article-item {
+  height: 108rpx;
+  line-height: 108rpx;
+  border-bottom: 2rpx solid #F0F0F0;
+}
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-item .icon {
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.article-item .name {
+  display: inline-block;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+

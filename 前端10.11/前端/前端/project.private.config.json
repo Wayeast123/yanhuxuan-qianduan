@@ -1,0 +1,77 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "pages/test1/test1",
+          "pathName": "pages/test1/test1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tutorScore/tutorScore",
+          "pathName": "pages/tutorScore/tutorScore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/special/special",
+          "pathName": "pages/special/special",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "pages/test2/test2",
+          "pathName": "pages/test2/test2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/yandaoshi/yandaoshi",
+          "pathName": "pages/yandaoshi/yandaoshi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/yandaoshi-lib/yandaoshi-lib",
+          "pathName": "pages/yandaoshi-lib/yandaoshi-lib",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personalSignature/personalSignature",
+          "pathName": "pages/personalSignature/personalSignature",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personalResume/personalResume",
+          "pathName": "pages/personalResume/personalResume",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

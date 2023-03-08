@@ -1,0 +1,26 @@
+<view class="container">
+
+<textarea class="content" placeholder="发布导师的博客..."
+bindinput="onInput" maxlength="{{max}}" auto-focus
+></textarea> <!--  bindfocus="onFocus" bindblur="onBlur"-->
+
+<view class="image-list">
+  <!-- 显示图片 -->
+  <block wx:for="{{images}}" wx:key="*this">
+    <view class="image-wrap">
+      <image class="image" src="{{item}}" mode="aspectFill" bindtap="onPreviewImage" data-index="{{index}}" ></image>
+      <i class="iconfont icon-shanchu" bindtap="onDelImage" data-index="{{index}}"></i>
+    </view>
+  </block>
+  <!-- 选择图片 -->
+  <view class="image-wrap selectphoto" bindtap="onChooseImage">
+    <image class="iconfont" src='../../img/shangchuan.png'></image> <!--wx:if="{{isShowAdd}}"-->
+  </view>
+
+</view>
+</view>
+
+<view class="footer"> <!--style="bottom:{{footerBottom}}px"-->
+<text class="words-num">{{wordsNum}}</text>
+<button class="send-btn" bindtap="send">发布</button>
+</view>

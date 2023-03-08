@@ -1,0 +1,213 @@
+<view class="bar">
+<!-- 轮播图 begin -->
+<view class="lunbo">
+<swiper indicator-dots="true" autoplay="true" circular="true" indicator-active-color="white" interval="3000" duration="500">
+  <swiper-item wx:for="{{imgurls}}" wx:key="imgurls" wx:for-item="itemName">
+    <image mode="widthFix" src="{{itemName.url}}"/>
+  </swiper-item>
+</swiper>
+</view>
+<!-- 轮播图 end -->
+
+<!-- 选择框 begin -->
+<view class="selection">
+  <view class="left">
+    <text>请选择院校</text>
+    <text class="txt">></text>
+  </view>
+  <view class="right">
+    <text>请选择专业</text>
+    <text class="txt">></text>
+    </view>
+</view>
+<!-- 选择框 end -->
+
+<!-- 浏览页 begin -->
+<view class="liulan">
+  <view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="introduce">推荐</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="exp">学长列表</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="sell">资料专区</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="exp">考研经验</view>
+  <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="fudao">读研经历</view>
+  </view>
+</view>
+<!-- 浏览页 end -->
+
+<!-- 各个部分的详情页 begin -->
+  <!-- 学长经验 begin -->
+  <view class="xuezhang" wx:if="{{currentTab ==0}}">
+   <view class="box">
+   <!-- 上两层 -->
+    <view class="box-top">
+      <view class="bt1">陈晓光
+      <!-- <text class="iconfont .icon-nanxing" style="font-size: large;color: blue;"></text>期望职位</view> -->
+      <text class="iconfont .icon-nvxing2" style="font-size: large;color: palevioletred;"></text>
+      <text style="font-size: small;color:grey;background-color: rgb(245, 230, 230);border-radius: 50%;">2017级</text>
+      </view>
+      <view class="bt2">硕士 | 清华大学 | 软件工程</view>
+    </view>
+    <!-- 图片 -->
+    <view class="box-second">
+      <image src="../../img/header/dd.png" class="img2"></image>
+    </view>
+    <!-- 内容 -->
+    <view class="box-third">我于20XX年1月参加全国硕士研究生考试，政治73分，外语77分，专业一126分，专业二121分，总分397分，报考的是车辆工程(专业学位)专业...
+    </view>
+   </view>
+  </view>
+  <!-- 学长经验页 end -->
+  <!-- 学长经验 begin -->
+  <view class="xuezhang" wx:if="{{currentTab ==0}}">
+   <view class="box">
+   <!-- 上两层 -->
+    <view class="box-top">
+      <view class="bt1">张宇
+      <text class="iconfont .icon-nanxing" style="font-size: large;color: blue;"></text>
+      <!-- <text class="iconfont .icon-nvxing2" style="font-size: large;color: palevioletred;"></text> -->
+      <text style="font-size: small;color:grey;background-color: rgb(245, 230, 230);border-radius: 50%;">2019级</text>
+      </view>
+      <view class="bt2">硕士 | 五邑大学 | 通信工程</view>
+    </view>
+    <!-- 图片 -->
+    <view class="box-second">
+      <image src="../../img/header/ee.png" class="img2"></image>
+    </view>
+    <!-- 内容 -->
+    <view class="box-third">分析为王。很多朋友喜欢用机构出的背诵手册，但是如果你目标院校优质不建议，因为真题不少选择都是分析原话，偏僻的知识点，机构的讲义也。...
+    </view>
+   </view>
+  </view>
+  <!-- 学长经验页 end -->
+
+  <!-- 学长列表 begin   -->
+  <view class="liebiao" wx:if="{{currentTab ==1}}">
+    <view class="touxiang">
+      <image src="../../img/header/ee.png" class="img3"></image>
+    </view>
+    <view class="ziliao">
+      <view>从学姐 
+      <text style="font-size: small;color: rgb(0,0,0,0.7);border-radius: 40%;background-color: rgb(236, 233, 233);">2020级</text></view>
+      <view style="color: rgb(0,0,0,0.7)">南京信息大学 | 软件工程</view>
+    </view>
+    <view class="tubiao">
+    <text class="iconfont icon-vip" style="color: rgb(240,217,40);"></text>
+    1v1辅导课
+    </view>
+  </view>
+  <!-- 学长列表 end -->
+
+  <!-- 学长列表 begin   -->
+  <view class="liebiao" wx:if="{{currentTab ==1}}">
+    <view class="touxiang">
+      <image src="../../img/header/ff.png" class="img3"></image>
+    </view>
+    <view class="ziliao">
+      <view>梁学长 
+      <text style="font-size: small;color: rgb(0,0,0,0.7);border-radius: 40%;background-color: rgb(236, 233, 233);">2020级</text></view>
+      <view style="color: rgb(0,0,0,0.7)">五邑大学 | 软件工程</view>
+    </view>
+    <view class="tubiao">
+    <text class="iconfont icon-vip" style="color: rgb(240,217,40);"></text>
+    1v1辅导课
+    </view>
+  </view>
+  <!-- 学长列表 end -->
+
+  <!-- 资料区 begin -->
+  <view class="biji" wx:if="{{currentTab ==2}}">
+  <!-- 图片 -->
+    <view class="biji1">
+      <image src="../../static/ziliao.png" class="img4"></image>
+    </view>
+    <view class="biji2">
+      <view class="biji21">
+        <view class="biji211">汤家凤笔记+高数手稿</view>
+        <view class="biji212">笔记白描版</view>
+      </view>
+      <view class="biji22">
+      <image src="../../img/header/aa.png" class="img5"></image>
+      <text style="margin-top: 7%;color: rgb(0,0,0,0.5);">雀学姐</text>
+      <view class="jiaqian">
+      <view style="color: rgb(237,137,44);">￥ 5</view>
+      <view style="color: rgb(0,0,0,0.5);font-size: small;">售出888份</view>
+      </view>
+      </view>
+    </view>
+  </view>
+  <!-- 资料区 end -->
+
+  <!-- 资料区 begin -->
+  <view class="biji" wx:if="{{currentTab ==2}}">
+  <!-- 图片 -->
+    <view class="biji1">
+      <image src="../../static/ziliao.png" class="img4"></image>
+    </view>
+    <view class="biji2">
+      <view class="biji21">
+        <view class="biji211">腿姐笔记+刑法分则手稿</view>
+        <view class="biji212">笔记白描版</view>
+      </view>
+      <view class="biji22">
+      <image src="../../img/header/ff.png" class="img5"></image>
+      <text style="margin-top: 7%;color: rgb(0,0,0,0.5);">梁学长</text>
+      <view class="jiaqian">
+      <view style="color: rgb(237,137,44);">￥ 5</view>
+      <view style="color: rgb(0,0,0,0.5);font-size: small;">售出888份</view>
+      </view>
+      </view>
+    </view>
+  </view>
+  <!-- 资料区 end -->
+
+<!-- 考研经验 begin -->
+  <view class="kaoyan" wx:if="{{currentTab ==3}}">
+    <view class="kaoyan1">2021南开“中国现代文学”初试第一409，复试609经验贴如何逆袭</view>
+    <view class="kaoyan2">
+      <view class="kaoyan21">
+        <view class="kaoyan211">
+          <image src="../../img/header/aa.png" class="img6"></image>
+          <view class="kaoyan2111">张顺行</view>
+          <view class="kaoyan2112"></view>
+        </view>
+        <view class="kaoyan212">实际上本科前三年一直在高强度努力学习数学，全国大学生数学竞赛A类B类都是一等(上海前50)，平时无聊的时候还顺手编写了...</view>
+      </view>
+      <view class="kaoyan22">
+        <image src="../../static/ziliao.png" class="img7"></image>
+      </view>
+    </view>
+    <view class="kaoyan3">
+      517赞同 · 39评论 · 2021-09-14
+      <view class="kaoyan32">···</view>
+    </view>    
+  </view>
+<!-- 考研经验 end -->
+
+<!-- 考研经验 begin -->
+<view class="kaoyan" wx:if="{{currentTab ==3}}">
+    <view class="kaoyan1">2021五邑大学，复试405经验贴，早6晚9的计划表，如何记录与实现的过程</view>
+    <view class="kaoyan2">
+      <view class="kaoyan21">
+        <view class="kaoyan211">
+          <image src="../../img/header/ff.png" class="img6"></image>
+          <view class="kaoyan2111">梁学长</view>
+          <view class="kaoyan2112"></view>
+        </view>
+        <view class="kaoyan212">标准化题库、配套通关练习：分学科以单选、多选、简答、分析题、案例、论述的顺序排列，适合过2遍分析，对学科分题型练...</view>
+      </view>
+      <view class="kaoyan22">
+        <image src="../../static/ziliao.png" class="img7"></image>
+      </view>
+    </view>
+    <view class="kaoyan3">
+      600赞同 · 25评论 · 2021-10-14
+      <view class="kaoyan32">···</view>
+    </view>    
+  </view>
+<!-- 考研经验 end -->
+
+<!-- 各个部分的详情页 end -->
+
+</view>
+
+

@@ -1,0 +1,47 @@
+<view>
+    <view class="historycon">
+        <scroll-view class='scroll-view'>
+            <!-- <view>
+                <view class='time'>2018-8-8 13:50学生</view>
+            </view> -->
+            <block wx:for="{{chatMessages}}" wx:key="id">
+                <!-- 这里的判断应该是是否和本用户id相等 -->
+                <view class='chat-right' style="height:100rpx" wx:if="{{item.sendId == userId}}">
+                    <navigator url='/pages/personalMessage/personalMessage'>
+                        <view class='user-img'>
+                            <image src='../../img/header/aa.png' class='user-img-item'></image>
+                        </view>
+                    </navigator>
+                    <view class='chat-content'>
+                        <text>{{item.sendContent}}</text>
+                    </view>
+                </view>
+
+                <view class='chat-left' style="height:{{height}}rpx" wx:else>
+                    <navigator url='/pages/personalMessage/personalMessage'>
+                        <view class='user-img'>
+                            <image src='../../img/header/ss.png' class='user-img-item'></image>
+                        </view>
+                    </navigator>
+                    <view class='chat-content' style=' width:450rpx'>
+                        <text>{{item.sendContent}}</text>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+</view>
+
+<view class="button-view">
+  <view class='sendMessage'>
+        <view class='message'>
+            <view class="message-text">
+                <input class="weui-input" type='text' id="sendContent" bindinput="handleInput" />
+            </view>
+        </view>
+
+        <view class='send'>
+            <image src='../../img/chat/send.png' class='send-img' bindtap='send'></image>
+        </view>
+  </view>
+</view>

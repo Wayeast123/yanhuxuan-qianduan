@@ -1,0 +1,42 @@
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <view class="publish-container">
+      <image src="/static/images/write.png" bindtap="publish"></image>
+    </view>
+
+    <image src="/static/images/video/fenlei.png" bindtap="Screen"></image>
+
+    <view class="search">
+      <input class="bar" id="keyWord" placeholder="{{placeholder}}" placeholder-class="in-bar"
+        bindinput="handleInput"></input>
+    </view>
+    <image src="/static/images/search.png" bindtap="informationReleaseFuzzySearch"></image>
+  </view>
+</view>
+
+<!-- 发布信息列表 -->
+<view class="blog-list">
+  <block wx:for="{{informationReleaseList}}" wx:key="id">
+    <view class="blog-panel">
+      <view class="blog">
+        <view class="blog-title">
+          <view class="blog-nickName">
+          <image src="../../img/header/cc.png" class="img1"></image>
+          <text class="mingzi">{{item.userName}}老师</text>
+          </view>
+          <view class="blog-box">
+            <view class="blog-time">{{item.schoolName}}</view>
+            <view class="blog-time">{{item.majorName}}</view>
+            <view class="blog-time">{{item.createTime}}</view>
+          </view>
+        </view>
+        <view class="blog-content">{{item.content}}</view>
+        <view class="img-box">
+        <image class="img" src="{{item.image}}" hidden="{{!item.image}}" catch:tap="onPreviewImage"
+          data-imgsrc="{{item}}" data-imgs="{{blog.img}}"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

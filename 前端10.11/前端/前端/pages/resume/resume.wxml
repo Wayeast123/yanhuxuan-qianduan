@@ -1,0 +1,71 @@
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+        <image src="/static/images/video/fenlei.png" bindtap="resumeFenlei"></image>
+        <view class="search">
+            <input class="bar" id="keyWord" placeholder="{{placeholder}}" placeholder-class="in-bar" bindinput="handleInput"></input>
+        </view>
+        <image src="/static/images/search.png" bindtap = "personalResumeFuzzySearch"></image>
+  </view>
+</view>
+
+<!-- 个人简历信息列表 -->
+<view class="blog-list">
+      <block wx:for="{{personalResumeList}}" wx:key="id">
+            <!-- <image class="blog-portrait" src="{{item.headImage}}"></image> -->
+            <view class="item">
+                  <view class="item-main" data-personalResumeList="{{item}}" bindtap="totest1">
+                        <view class="job">
+                              <view class="job-position" data-id="{{id}}">
+                              <image src="../../img/header/cc.png" class="img1"></image>
+                              <text>{{item.userName}}</text>
+                              </view>
+                               <!-- 星星组件 -->
+                              <view class="job-Salary">
+                              <view style="width:105px;margin:0 auto;margin-top: 5rpx;">
+                              <view style="display:flex;">            
+                              <view class="star" wx:for="{{item.score}}" wx:key="id"><view class="icon icon_yellow"></view></view>
+                              <view wx:if="{{star_per>0}}" class="star" style="position:relative;">　　　　　　　　　　　　
+                	            <view class="icon icon_gray"></view>　　　　　　　　　　　　
+                	            <view class="icon icon_yellow"style="width:{{star_per}}%;overflow:hidden;position:absolute;left:0;top:0;"></view>　　　　　　　　　 
+                              </view>
+                              <view class="star" wx:for="{{gray_star}}" wx:key="id"><view class="icon icon_gray"></view></view>
+                              </view>     
+                              </view>            
+                              </view>
+                        </view>
+
+                        <view class="secondary">
+                              <text class="secondary-list">{{item.schoolName}}</text>
+                              <text class="secondary-list">{{item.majorName}}</text>
+                              <text>{{item.telephone}}</text>
+                              <view class="blog-time">{{item.createTime}}</view>
+                        </view>
+
+                        <view class="company">
+                              <text>{{item.content}}</text>
+                        </view>
+                  </view>
+            </view>
+            <view class="ctrl">
+                  <form bindsubmit="formSubmit">
+                        <view class="ctrl-item">
+                              <button  class='button' formType="submit" hover-class="share-hover">
+                                    <input name="objectId" value="{{item.userId}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                    <!-- <i class="iconfont icon-fasongyoujian"></i> -->
+                                    <text style="font-size:26rpx">发送简历</text>
+                              </button>
+                        </view>
+                  </form>
+                  <form bindsubmit="collect">
+                        <view class="ctrl-item share">
+                              <button class="share-btn" formType="submit" hover-class="share-hover">
+                                    <input name="collectId" value="{{item.id}}" placeholder-style='font-size:28rpx;' hidden="true"></input>
+                                    <!-- <i class="iconfont icon-shoucang"></i> -->
+                                    <text style="font-size:26rpx">收藏</text>
+                              </button>
+                        </view>
+                  </form>
+            </view>
+      </block>
+</view>
